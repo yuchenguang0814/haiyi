@@ -1,10 +1,9 @@
 <template>
   <swiper>
     <swiper-item v-for="item in banners">
-      <a :href="item.link">
-        <img :src="item.imageUrl">
+      <a :href="Url+item.link">
+        <img :src="Url+item.imageUrl">
       </a>
-      <p>item.imageUrl</p>
     </swiper-item>
   </swiper>
 </template>
@@ -13,6 +12,11 @@
   import {Swiper, SwiperItem} from 'components/common/swiper'
 
   export default {
+    data() {
+      return {
+        Url:"http://127.0.0.1:3000"
+      }
+    },
     name: "HomeSwiper",
     props: {
       banners: {
