@@ -1,23 +1,22 @@
 <template>
   <div class="home">
-    <nav-bar class="home-nav">
-      <div slot="center">购物车</div>
-    </nav-bar>
-    <home-swiper :banners="banners"/>
-    </home-swiper>
+    <nav-menu class="home-nav">
+    </nav-menu>
+    <home-Carousel :banners="banners">
+    </home-Carousel>
   </div>
 </template>
 
 <script>
-  import NavBar from 'components/common/navbar/NavBar'
+  import NavMenu from 'components/common/navmenu/NavMenu'
   import {GetHomeMultidata} from 'network/home'
-  import HomeSwiper from './childrenComps/HomeSwiper'
+  import HomeCarousel from './childrenComps/HomeCarousel'
 
   export default {
     name: "Home",
     components: {
-      NavBar,
-      HomeSwiper
+      NavMenu,
+      HomeCarousel
     },
     data() {
       return {

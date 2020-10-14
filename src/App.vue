@@ -1,7 +1,9 @@
 <template>
   <div id="app">
+    <el-container class="container">
     <router-view></router-view>
     <!-- <main-tab-bar></main-tab-bar> -->
+    </el-container>
   </div>
 </template>
 <script>
@@ -14,4 +16,7 @@ export default {
 </script>
 <style>
   @import "assets/css/base.css";
+  .container {
+    display: inline;
+  }
 </style>
