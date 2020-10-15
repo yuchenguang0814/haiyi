@@ -1,22 +1,25 @@
 <template>
   <div id="app">
     <el-container class="container">
-    <router-view></router-view>
+      <nav-menu>
+      </nav-menu>
+      <router-view></router-view>
     <!-- <main-tab-bar></main-tab-bar> -->
+    <el-footer></el-footer>
     </el-container>
   </div>
 </template>
 <script>
-  //import MainTabBar from 'components/content/mainTabbar/MainTabBar'
+  import NavMenu from 'components/common/navmenu/NavMenu'
 export default {
   components: {
-   // MainTabBar
+    NavMenu
   }
 }
 </script>
 <style>
   @import "assets/css/base.css";
   .container {
-    display: inline;
+    width:100%
   }
 </style>

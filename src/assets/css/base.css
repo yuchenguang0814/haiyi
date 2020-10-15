@@ -1,4 +1,6 @@
 @import "./normalize.css";
+@import "./display.css";
+/* @import 'element-ui/lib/theme-chalk/display.css'; */
 
 /*:root -> 获取根元素html*/
 :root {
@@ -6,7 +8,7 @@
   --color-high-text: #ff5777;
   --color-tint: #ff8198;
   --color-background: #fff;
-  --font-size: 14px;
+  --font-size: 18px;
   --line-height: 1.5;
 }
 
@@ -19,6 +21,7 @@
 }
 
 body {
+  font: 12px / 1.5 "Microsoft YaHei", arial, 宋体, sans-serif;
   font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
   user-select: none; /* 禁止用户鼠标在页面上选中文字/图片等 */
   -webkit-tap-highlight-color: transparent; /* webkit是苹果浏览器引擎，tap点击，highlight背景高亮，color颜色，颜色用数值调节 */
@@ -54,4 +57,5 @@ a {
 .right {
   float: right;
 }
+
 
