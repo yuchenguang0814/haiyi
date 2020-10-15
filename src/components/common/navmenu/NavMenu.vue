@@ -3,9 +3,8 @@
     <div class="left">
       <img src="~assets/image/logo.png" alt="海翊机械">
     </div> 
-    <div class="nav-menu hidden-sm-and-down">  
       <div class="center" >
-        <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" text-color="#555" @select="handleSelect" active-text-color="#175bc0">
+        <el-menu class="el-menu-demo hidden-xs-only" :default-active="activeIndex" mode="horizontal" text-color="#555" @select="handleSelect" active-text-color="#175bc0">
           <el-menu-item index="1">海翊机械</el-menu-item>
           <el-submenu index="2">
             <template slot="title" class="product">产品中心</template>
@@ -34,14 +33,12 @@
             </el-submenu>
           </el-submenu>
           <el-menu-item index="3">应用案例</el-menu-item>
-          <el-menu-item index="4">服务支持</el-menu-item>
           <el-menu-item index="5">海翊新闻</el-menu-item>
           <el-menu-item index="6">关于海翊</el-menu-item>
           <el-menu-item index="7">联系海翊</el-menu-item>
         </el-menu>
       </div>
-    </div>
-    <div class="right">
+    <div class="right hidden-xs-only">
       <p>
         <!-- <a href="#" target="_self" title="中文网站"><img src="~assets/image/en.png"  alt="中文网站"></a> -->
         <a href="#" target="_self" title="英文网站"><img src="~assets/image/us.png"  alt="英文网站"></a>
@@ -70,12 +67,12 @@ export default {
 
 <style>
  #app .el-header{
+    display: flex;
     height:82px!important;
+    box-shadow: 0px 3px 3px rgba(100, 100, 100, 0.3);
+    margin-bottom: 3px;
   }
   
-  .nav-menu {
-    flex:0.6;
-  }
   .el-menu--horizontal>.el-menu-item.is-active {
     border-bottom:none!important;
   }
@@ -85,14 +82,19 @@ export default {
   }
   .left img{
     width:100%;
+    min-width: 330px;
+    min-height: 80px;
   }
   .center {
-    float: left;
     text-align: center;
   }
   .right{
-    padding:20px 20px 20px 20px;
-    
+    padding:20px 20px 20px 10px;
+    margin-left: 20px;    
+  }
+  .right img {
+    min-width: 50px;
+    min-height: 33px;
   }
 
 .el-menu--horizontal>.el-menu-item{ float:left;width: 95px;font-size: 16px;text-align: center;position:relative;}
